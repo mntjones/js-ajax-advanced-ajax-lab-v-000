@@ -7,7 +7,9 @@ function getRepositories() {
 }
 
 function showRepositories(event, data) {
-  
+  document.addEventListener("DOMContentLoaded", function(event) {
+    Handlebars.registerPartial("authorPartial", document.getElementById ("author-partial-template").innerHTML)
+  });
   
   const repos = JSON.parse(this.responseText);
   const src = document.getElementById("repository-template").innerHTML;
