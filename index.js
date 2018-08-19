@@ -16,5 +16,7 @@ function showRepositories(event, data) {
   const template = Handlebars.compile(src);
   const repoList = template(repos);
   document.getElementById("repositories").innerHTML = repoList;
+  
+  
 }
 
